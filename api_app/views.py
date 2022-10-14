@@ -10,7 +10,7 @@ def api(request):
     
     headers = {
         'Accepts': 'application/json',
-        'X-CMC_PRO_API_KEY': '9161a226-c054-438a-8edb-f7fe66853898'
+        'X-CMC_PRO_API_KEY': 'yourkey'
     }
     session = Session()
     session.headers.update(headers)
