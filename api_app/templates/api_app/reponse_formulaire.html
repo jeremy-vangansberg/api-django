@@ -1,19 +1,29 @@
 {% extends 'base.html' %}
 
-{% block content %}
+{% load bootstrap5 %}
 
-<h1>Obtenir des informations sur des cryptos</h1>
-<form method="POST">
-    {% csrf_token %}
-    {% for field in form %}
-        <div>{{field.label}}</div>
-        <div>{{field}}</div>
-    {% endfor %}
-    <div>
-        <input type="submit" value="Test">
-    </div>
+{# Load CSS and JavaScript #}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{# Display django.contrib.messages as Bootstrap alerts #}
+{% bootstrap_messages %}
+
+{% block content %}
+<div class="container">
+    <h1>Obtenir des informations sur des cryptos</h1>
+{# Display a form #}
+<form method="post" class="form">
+  {% csrf_token %}
+  {% bootstrap_form form %}
+  {% buttons %}
+    <button type="submit" class="btn btn-primary">
+      Submit
+    </button>
+  {% endbuttons %}
 </form>
 
-<p>{{ info.data.1027.quote.{devise}.price.format() }}</p>
+<p>{{ info.data }}</p>
 
+</div>
 {% endblock content %}
