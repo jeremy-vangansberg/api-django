@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'api_app',
     'divers',
     'crispy_forms',
-    'bootstrap5',
     'widget_tweaks',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -130,3 +129,5 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = ''

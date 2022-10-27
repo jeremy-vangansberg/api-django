@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class ApiModel(models.Model):
     slug = models.CharField(
         max_length=100,
@@ -11,3 +12,4 @@ class ApiModel(models.Model):
         blank=False,
         null=True
     )
+

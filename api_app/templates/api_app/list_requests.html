@@ -1,0 +1,8 @@
+<h1>La liste des requetes</h1>
+
+
+<ul>
+{% for request in requests_api %}
+<li>{{request.slug}} en devise : {{request.convert}}</li>
+{% endfor %}
+</ul>
